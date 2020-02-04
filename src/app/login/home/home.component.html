@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="area" >
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+  </div>
+
+  <div class="context">
+    <h1>DeltaCodes <span>Admin</span></h1>
+
+    <div class="login">
+      <input type="email" spellcheck="false" placeholder="Email">
+      <input type="password" spellcheck="false" placeholder="Password">
+      <button type="submit" (click)="submit()"> <span *ngIf="!submitted">Login</span> <i *ngIf="submitted" class="fa fa-spinner rotating" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</div>

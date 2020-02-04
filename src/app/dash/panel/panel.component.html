@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="topbar">
+    <a href="/" class="brand">DeltaCodes <span>Admin</span></a>
+    <div class="spacer"></div>
+    <div class="avatar" (click)="drop()" [class.dropactive]="dropdownStatus">
+      <div class="img"></div>
+      <div class="name">Abhishek Singh</div>
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+
+      <div class="dropMenu" [class.showDrop]="dropdownStatus">
+        <div class="ctr">
+          <a href="">Account Settings</a>
+          <a href="">Create account</a>
+          <a href="">Super admin</a>
+          <a class="logout" href="">Logout</a>
+        </div>
+      </div>
+    </div>
+    <div class="navs">
+      <div class="nav" routerLink="/settings" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="activenav2"><i class="fa fa-cog" aria-hidden="true"></i></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="sidenav">
+      <a class="nav" routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="activenav">
+        <i class="fa fa-th-large" aria-hidden="true"></i>
+        <span>Dashboard</span>
+      </a>
+      <a class="nav" routerLink="/queries" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="activenav">
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <span>Queries</span>
+      </a>
+      <a class="nav" routerLink="/applications" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="activenav">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <span>Applications</span>
+      </a>
+      <a class="nav" routerLink="/members" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="activenav">
+        <i class="fa fa-users" aria-hidden="true"></i>
+        <span>Members</span>
+      </a>
+      <a class="nav" routerLink="/blog" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="activenav">
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        <span>Blog</span>
+      </a>
+    </div>
+    <div class="content">
+      <div class="page">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
