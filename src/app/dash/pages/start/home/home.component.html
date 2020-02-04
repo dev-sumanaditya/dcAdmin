@@ -2,10 +2,10 @@
     <div class="topbar">
         <h4>Queries</h4>
         <div class="spacer"></div>
-        <div class="btn btnActive" (click)="getSelectedRows()">View</div>
-        <div class="btn">Mark as Lead</div>
-        <div class="btn">Mark for Review</div>
-        <div class="btn">More Options</div>
+        <div class="btn" [class.btnActive]="ischanged" (click)="getSelectedRows()">View</div>
+        <div class="btn" [class.btnActive]="ischanged">Mark as Lead</div>
+        <div class="btn" [class.btnActive]="ischanged">Mark for Review</div>
+        <div class="btn" [class.btnActive]="ischanged">More Options</div>
         <div class="btn btnActive" (click)="onBtnExport()">Export CSV</div>
     </div>
     <div class="area">
@@ -17,6 +17,7 @@
             [columnDefs]="columnDefs"
             rowSelection="single"
             (gridReady)="onGridReady($event)"
+            (selectionChanged)="changed()"
             >
         </ag-grid-angular>
     </div>

@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
 
   private gridApi;
   private gridColumnApi;
+  private ischanged:boolean = false;
 
   columnDefs = [
         {headerName: 'Id', field: 'id', sortable: true, filter: true, checkboxSelection: true },
@@ -57,6 +58,14 @@ export class HomeComponent implements OnInit {
         { id: 1, name: 'Aditya Suman', email: 'sumanaditya@gmail.com', contact: '1234567890', type: 'Website', size: 'small', job: 'Contract', enterprise: 'No', cname:'DeltaCodes Inc.', query: 'this is some query', country: 'India'},
         { id: 1, name: 'Abhishek Singh', email: 'asingh@gmail.com', contact: '9989998899', type: 'Mobile app', size: 'medium', job: 'small', enterprise: 'Yes', cname:'DeltaCodes Inc.', query: 'this is some query', country: 'India'},
   ];
+
+  public changed() {
+    if(this.agGrid.api.getSelectedNodes().length > 0) {
+      this.ischanged = true;
+    } else {
+      this.ischanged = false;
+    }
+  }
 
   getSelectedRows() {
     const selectedNodes = this.agGrid.api.getSelectedNodes();
