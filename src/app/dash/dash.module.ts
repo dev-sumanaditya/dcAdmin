@@ -4,13 +4,14 @@ import { CommonModule } from '@angular/common';
 import { DashRoutingModule } from './dash-routing.module';
 import { PanelComponent } from './panel/panel.component';
 import { RouterModule } from '@angular/router';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [PanelComponent],
   imports: [
     CommonModule,
     DashRoutingModule,
-    RouterModule
+    RouterModule,
   ]
 })
 export class DashModule { }

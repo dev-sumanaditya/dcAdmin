@@ -30,12 +30,29 @@
     flex: 5;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .section .content .page {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     overflow: hidden scroll;
+}
+.section .content .page::-webkit-scrollbar
+{
+  width: 6px;  /* for vertical scrollbars */
+}
+
+.section .content .page::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.section .content .page::-webkit-scrollbar-thumb
+{
+  background: #0ac775;
 }
 
 .topbar .brand {
@@ -156,6 +173,7 @@
 .showDrop {
     display: block;
     max-height: 500% !important;
+    z-index: 10000 !important;
 }
 
 .dropMenu .ctr {

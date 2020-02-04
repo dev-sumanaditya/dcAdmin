@@ -1,1 +1,32 @@
-<h1>Dashboard</h1>
+<div class="container">
+    <div class="row">
+        <div class="nav totalVisit">
+            <h1>Total Page Visits</h1>
+            <h1>2345</h1>
+        </div>
+        <div class="nav">
+            <h1>Monthly Visits</h1>
+            <canvas baseChart width="900px" height="300px"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"></canvas>
+        </div>
+    </div>
+
+    <div class="row row2">
+        <div class="nav"></div>
+        <div class="nav"></div>
+        <div class="nav"></div>
+        <div class="nav"></div>
+    </div>
+
+    <div class="row row2">
+        <div class="nav"></div>
+        <div class="nav"></div>
+        <div class="nav"></div>
+        <div class="nav"></div>
+    </div>
+</div>

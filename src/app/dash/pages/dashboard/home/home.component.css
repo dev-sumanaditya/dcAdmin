@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.nav {
+    flex: 1;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient( circle 343px at 46.3% 47.5%,  rgba(242,242,242,1) 0%, rgba(241,241,241,1) 72.9% );
+}
+
+.totalVisit {
+    color: white;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,107,141,1) 0%, rgba(0,69,91,1) 90% );
+}
+.totalVisit h1 {
+    font-size: 50px;
+}
+
+.row2 .nav {
+    min-height: 300px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,107,141,1) 0%, rgba(0,69,91,1) 90% );
+
+}

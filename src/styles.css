@@ -1,3 +1,8 @@
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+
+
+
 * ,body, html {
     margin: 0;
     padding: 0;
