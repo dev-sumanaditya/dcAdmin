@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { ChartsModule } from 'ng2-charts';
 import { AgGridModule } from 'ag-grid-angular';
 
+import { QuillModule } from 'ngx-quill'
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +18,9 @@ import { AgGridModule } from 'ag-grid-angular';
     BrowserModule,
     AppRoutingModule,
     ChartsModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    QuillModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

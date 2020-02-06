@@ -1,1 +1,47 @@
-<h1>blog</h1>
+<div class="container">
+    <div class="topbar">
+        <h4>Published Blogs</h4>
+        <div class="spacer"></div>
+        <div class="btn btnActive">Show all Blogs</div>
+    </div>
+    <div class="area2">
+        <div class="nav" *ngFor="let i of dummy">
+            <div class="t"></div>
+            <div class="b">
+                <h3>Some Blog post</h3>
+                <p>this is some blog post.. this ss dskjndka sakjdkda sadkandsdk asd s </p>
+            </div>
+        </div>
+    </div>
+    <div class="topbar">
+        <h4>Incomplete Blogs</h4>
+        <div class="spacer"></div>
+    </div>
+    <div class="area2">
+        <div class="nav" *ngFor="let i of dummy">
+            <div class="t"></div>
+            <div class="b">
+                <h3>Some Blog post</h3>
+                <p>this is some blog post.. this ss dskjndka sakjdkda sadkandsdk asd s </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="topbar">
+        <h4>Create Blog</h4>
+        <div class="spacer"></div>
+        <div class="btn" [class.btnActive]="contentChanged">More Actions</div>
+        <div class="btn" [class.btnActive]="contentChanged">Save</div>
+    </div>
+    <div class="area">
+        <quill-editor
+        [styles]="{height: '74vh'}"
+        [(ngModel)]="htmlText"
+        placeholder="Enter Text"
+        [modules]="quillConfig"
+        (onSelectionChanged)="onSelectionChanged($event)"
+        (onContentChanged)="onContentChanged($event)"
+        >    
+        </quill-editor>
+    </div>
+</div>
